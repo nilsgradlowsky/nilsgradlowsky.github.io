@@ -1,0 +1,54 @@
+<!doctype html!>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Jaydn Goodwin</title>
+		<link rel='shortcut icon' href='../favicon.png' type='image/x-icon'/ >
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Space+Mono">
+		<link rel="stylesheet" type="text/css" href="../normalize.css">
+		<link rel="stylesheet" type="text/css" href="article-style.css">
+	</head>
+<body>
+	<header><a href="../index.html#me">Jaydn <br>Goodwin</a></header>
+	<nav>
+		<a class="nav-link" href="../index.html#about">About<span><</span></a>
+		<a class="nav-link" href="../index.html#projects">Projects<span><</span></a>
+		<a class="nav-link" href="../index.html#articles">Articles<span><</span></a>
+		<a class="nav-link" href="../index.html#contact">Contact<span><</span></a>
+	</nav>
+
+	<hr id="mobile-break">
+
+	<div id="title">
+		<h1>This Website</h1>
+	</div>
+
+	<div id="content">
+		<p>Welcome to my website, this is the first article I am writing to outline why I have made this website and what it will consist of.</p>
+		<p>Since I'm (almost) the only person with my name, I'm sure most things you find of me online is certainly me or about me, so to give you a quick summary and to keep you from digging deeper I have decided to create this website.</p>
+		<p>As a Computer Science student (and being a generally curious person) I'm constantly learning new things that I would like to share and I believe sharing this knowledge in the form of a blog will not only help myself learn faster but also allow others to learn from me.</p>
+		<p>Make sure to stay tuned for any future articles.</p>
+		<p>- Jaydn</p>
+	</div>
+
+	<footer>Code, design and copy by Jaydn Goodwin | © 2019</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<script>
+	function nightMode() {
+	    var currentHour = new Date().getHours();
+		if ((currentHour >= 21) || (currentHour < 6)) {
+			$('html, body').css({'background-color':'#333333','color':'#F8F8F8'});
+			$('header, nav').css({'color':'#ffffff'});
+			$('#title').css({'background-color':'#333333'});
+			$('#content').css({'background-color':'#3b3b3b'});
+			$('footer').css({'background-color':'#3b3b3b'});
+		}
+	}
+	nightMode();
+	</script>
+
+</body>
+</html>
