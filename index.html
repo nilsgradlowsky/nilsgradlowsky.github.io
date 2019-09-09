@@ -10,19 +10,49 @@
 	</head>
 <body>
 	<header>
-		<a href="index.html"><h1>nils gradlowsky</h1></a>
-		<h2>SOUND FOR FILM</h2>
+		<a href="index.html"><h1>SOUND FOR FILM</h1></a>
+		<h2>nils gradlowsky</h2>
 	</header>
 	<nav>
-		<a class="nav-link" href="index.html"><h2>work</h2></a>
-		<a class="nav-link" href="reel.html"><h2>reel</h2></a>
-		<a class="nav-link" href="about.html"><h2>about</h2></a>
+		<a href="index.html"><h2>work</h2></a>
+		<a href="reel.html"><h2>reel</h2></a>
+		<a href="about.html"><h2>about</h2></a>
 	</nav>
 	<hr>
-	<section>
-		
-	</section>
-	<footer>Code, design and copy by Jaydn Goodwin | © 2019</footer>
+	<nav id="work-nav">
+		<a id="production-link" href="#production" onclick="divToDiv('post-production', 'production')"><h2>production</h2></a>
+		<a id="post-production-link" href="#post-production" onclick="divToDiv('production', 'post-production')"><h2>post-production</h2></a>
+	</nav>
+	<div id="production">
+		<p>hi</p>
+	</div>
+	<div id="post-production">
+		<p>hello</p>
+	</div>
+	<footer>Code and design by Jaydn Goodwin | © 2019</footer>
+
+	<script type="text/javascript">
+		function init() {
+			document.getElementById("production-link").focus();
+			var production = document.getElementById("production");
+			var postProduction = document.getElementById("post-production");
+			production.style.display = "block"; 
+            postProduction.style.display = "none";
+        	if (window.location.hash === "#post-production") {
+            	document.getElementById("post-production-link").focus();
+            	production.style.display = "none"; 
+            	postProduction.style.display = "block";
+        	}
+    	}
+   		window.onload = init;
+
+   		function divToDiv(hideDivId, showDivId) {
+  			var hideDiv = document.getElementById(hideDivId);
+  			var showDiv = document.getElementById(showDivId);
+  			hideDiv.style.display = "none";
+  			showDiv.style.display = "block";
+		}
+	</script>
 
 </body>
 </html>
