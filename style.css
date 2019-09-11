@@ -59,6 +59,22 @@ hr {
 
 #production {
 	display: flex;
+	padding-top:20px;
+}
+
+.in-production {
+	background-color:#F0F0F0;
+}
+
+.in-production .in-production-text {
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+
+.in-production:hover .in-production-text {
+	display: none;
 }
 
 .work-item {
@@ -90,6 +106,56 @@ hr {
 
 .caption h3 {
 	font-size:20px;
+}
+
+.project {
+	padding:20px;
+}
+
+.project img {
+	display: block;
+	width:50%;
+	height:auto;
+	float: left;
+}
+
+.project-info {
+	width:45%;
+	height:100%;
+	margin-left:55%;
+}
+
+.project-link {
+	display:inline-block;
+	margin:0 2mm;
+}
+
+.project-link img {
+	width:8mm;
+	height:auto;
+}
+
+.project-info p {
+	font-size:17px;
+}
+
+#about {
+	padding:20px;
+}
+
+#about img {
+	display: block;
+	width:35%;
+	height:auto;
+	float:right;
+
+}
+
+#about #bio {
+	font-size:17px;
+	text-align: justified;
+	width:60%;
+	margin-right:40%;
 }
 
 footer {
