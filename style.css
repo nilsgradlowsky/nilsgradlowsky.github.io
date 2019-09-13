@@ -36,7 +36,7 @@ header h2 {
 nav {
 	margin:auto;
 	display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 nav h2 {
@@ -131,7 +131,7 @@ hr {
 }
 
 .project-link img {
-	width:8mm;
+	width:10mm;
 	height:auto;
 }
 
