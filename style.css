@@ -151,18 +151,18 @@ hr {
 
 }
 
-#about #bio {
+#bio {
 	font-size:17px;
 	text-align: justified;
 	width:60%;
 	margin-right:40%;
 }
 
-#about #credits {
+#credits {
 	font-size:17px;
 }
 
-#about #credits ul {
+#credits ul {
 	list-style: none;
 }
 
