@@ -2,7 +2,7 @@ body {
 	background-color:#F8F8F8;
 	color:#333333;
 	font-family: 'Rokkitt', serif;
-	font-size:15px;
+	font-size:17px;
 	height:100%;
 	text-align:center;
 	margin:0;
@@ -23,12 +23,13 @@ header a:hover {
 }
 
 header h1 {
-	font-size:40px;
+	font-size:35px;
 	margin-top:30px;
 	margin-bottom:0;
 }
 
 header h2 {
+	font-size:25px;
 	margin:0;
 	color:#888888;
 }
@@ -40,6 +41,7 @@ nav {
 }
 
 nav h2 {
+	font-size:25px;
 	margin:10px;
 }
 
@@ -58,17 +60,21 @@ hr {
 }
 
 #production {
-	display: flex;
+	display:none;
+	flex-wrap: wrap;
+	justify-content: center;
 	padding-top:20px;
 }
 
 #post-production {
-	display: flex;
-	padding-top:20px;
+	display:none;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top:20px;
 }
 
 #field-recording {
-	display: flex;
+	display:none;
 	padding-top:20px;
 }
 
@@ -89,13 +95,12 @@ hr {
 
 .work-item {
 	position: relative;
-	display:inline-block;
 	margin:10px;
 }
 
 .work-item img {
 	width:225px;
-	height:300px;
+	height:auto;
 }
 
 .work-item:hover img {
@@ -119,34 +124,41 @@ hr {
 }
 
 .project {
-	padding:20px;
+	display:flex;
+	justify-content: space-evenly;
+	align-items: flex-start;
 }
 
 .project img {
-	display: block;
-	width:50%;
+	flex-grow:1;
+	width:45%;
 	height:auto;
-	float: left;
+	margin:2.5%;
 }
 
 .project-info {
+	flex-grow:1;
 	width:45%;
-	height:100%;
-	margin-left:55%;
+	height:auto;
+	margin:2.5%;
 }
 
-.project-link {
-	display:inline-block;
-	margin:0 2mm;
+#project-links {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.project-link:hover {
+	filter: opacity(.4);
 }
 
 .project-link img {
-	width:10mm;
+	flex-grow:1;
+	width:40px;
 	height:auto;
-}
-
-.project-info p {
-	font-size:17px;
+	margin:10px;
 }
 
 #about {
@@ -158,26 +170,38 @@ hr {
 	width:35%;
 	height:auto;
 	float:right;
-
 }
 
 #bio {
-	font-size:17px;
 	text-align: justified;
 	width:60%;
 	margin-right:40%;
-}
-
-#credits {
-	font-size:17px;
 }
 
 #credits ul {
 	list-style: none;
 }
 
-footer {
-	display:none;
-	background-color:#F0F0F0;
-	padding:5px 0;
+footer p {
+	font-size:13px;
+	margin:10px 0;
+}
+
+#footer-links {
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.footer-link img {
+	flex-grow:1;
+	width:auto;
+	height:15px;
+	margin:15px;
+	filter:grayscale(1);
+}
+
+.footer-link:hover {
+	filter: opacity(.4);
 }

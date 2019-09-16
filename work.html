@@ -147,29 +147,29 @@
 		</a>
 	</section>
 	<section id="post-production">
-		<a class="work-item in-production" href="#">
+		<a class="work-item in-production" href="post/in-production.html">
 			<img/>
 			<h3 class="in-production-text">IN PRODUCTION</h3>
 			<div class="caption">
-				<h3>UNTITLED</h3>
+				<h3>IN PRODUCTION</h3>
 				<h3>Sound Designer</h3>
 			</div>
 		</a>
 		<a class="work-item" href="post/miliz.html">
 			<img src="post/miliz.jpg"/>
 			<div class="caption">
+				<h3>IN PRODUCTION</h3>
 				<h3>Miliz</h3>
 				<h3>Mini Series</h3>
-				<h3>IN PRODUCTION</h3>
 				<h3>Sound Designer & Dialogue Editor</h3>
 			</div>
 		</a>
 		<a class="work-item" href="post/deine-schöne-gestalt.html">
 			<img src="post/deine-schöne-gestalt.png"/>
 			<div class="caption">
+				<h3>IN PRODUCTION</h3>
 				<h3>Deine Schöne Gestalt</h3>
 				<h3>Short Film</h3>
-				<h3>IN PRODUCTION</h3>
 				<h3>Additional Sound Designer</h3>
 			</div>
 		</a>
@@ -215,15 +215,23 @@
 		</a>
 	</section>
 	<section id="field-recording">
-		<h1>COMING SOON</h1>
+		<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/23314724&color=%23800020&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
 	</section>
-	<footer>Code and design by Jaydn Goodwin | © 2019</footer>
+	<footer>
+		<div id="footer-links">
+			<a class="footer-link" href="https://twitter.com/Nilssound" target="_blank"><img src="res/twitter.png"></a>
+			<a class="footer-link" href="https://www.linkedin.com/in/nils-gradlowsky-7652b215a/" target="_blank"><img src="res/linkedin.png"></a>
+			<a class="footer-link" href="https://www.imdb.com/name/nm8407128/" target="_blank"><img src="res/imdb.png"></a>
+			<a class="footer-link" href="mailto:info@nilsgradlowsky.com" target="_blank"><img src="res/email.png"></a>
+		</div>
+		<p>Code and design by <a href="https://www.jaydngoodwin.com" target="_blank">Jaydn Goodwin</a> | © 2019</p>
+	</footer>
 
 	<script type="text/javascript">
    		function openProduction() {
    			document.getElementById("post-production").style.display = "none";
    			document.getElementById("field-recording").style.display = "none";
-			document.getElementById("production").style.display = "block";
+			document.getElementById("production").style.display = "flex";
 			document.getElementById("post-production-link").style.backgroundColor = "#F8F8F8";
 			document.getElementById("post-production-link").style.color = "#333333";
 			document.getElementById("post-production-link").style.borderBottomColor = "transparent";
@@ -239,7 +247,7 @@
    		function openPostProduction() {
 			document.getElementById("production").style.display = "none";
 			document.getElementById("field-recording").style.display = "none";
-			document.getElementById("post-production").style.display = "block";
+			document.getElementById("post-production").style.display = "flex";
 			document.getElementById("production-link").style.backgroundColor = "#F8F8F8";
 			document.getElementById("production-link").style.color = "#333333";
 			document.getElementById("production-link").style.borderBottomColor = "transparent";
