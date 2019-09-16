@@ -161,21 +161,27 @@ hr {
 	margin:10px;
 }
 
+#reel {
+	display: flex;
+  	flex-direction: column;
+ 	justify-content: center;
+  	align-items: center;
+	text-align: center;
+ 	min-height: 100vh;
+}
+
 #about {
 	padding:20px;
 }
 
 #about img {
-	display: block;
-	width:35%;
+	width:250px;
 	height:auto;
-	float:right;
+	border-radius: 50%;
 }
 
 #bio {
 	text-align: justified;
-	width:60%;
-	margin-right:40%;
 }
 
 #credits ul {
