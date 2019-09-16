@@ -21,7 +21,8 @@
 	<hr>
 	<nav id="work-nav">
 		<a id="production-link" href="" onclick="openProduction()"><h2>production</h2></a>
-		<a id="post-link" href="" onclick="openPost()"><h2>post-production</h2></a>
+		<a id="post-production-link" href="" onclick="openPostProduction()"><h2>post-production</h2></a>
+		<a id="field-recording-link" href="" onclick="openFieldRecording()"><h2>field recording</h2></a>
 	</nav>
 	<section id="production">
 		<a class="work-item" href="production/die-einzelteile-der-liebe.html">
@@ -145,7 +146,7 @@
 			</div>
 		</a>
 	</section>
-	<section id="post">
+	<section id="post-production">
 		<a class="work-item in-production" href="#">
 			<img/>
 			<h3 class="in-production-text">IN PRODUCTION</h3>
@@ -213,36 +214,65 @@
 			</div>
 		</a>
 	</section>
+	<section id="field-recording">
+		<h1>COMING SOON</h1>
+	</section>
 	<footer>Code and design by Jaydn Goodwin | © 2019</footer>
 
 	<script type="text/javascript">
    		function openProduction() {
-   			document.getElementById("post").style.display = "none";
+   			document.getElementById("post-production").style.display = "none";
+   			document.getElementById("field-recording").style.display = "none";
 			document.getElementById("production").style.display = "block";
+			document.getElementById("post-production-link").style.backgroundColor = "#F8F8F8";
+			document.getElementById("post-production-link").style.color = "#333333";
+			document.getElementById("post-production-link").style.borderBottomColor = "transparent";
+			document.getElementById("field-recording-link").style.backgroundColor = "#F8F8F8";
+			document.getElementById("field-recording-link").style.color = "#333333";
+			document.getElementById("field-recording-link").style.borderBottomColor = "transparent";
    			document.getElementById("production-link").style.backgroundColor = "#F0F0F0";
    			document.getElementById("production-link").style.color = "#800020";
 			document.getElementById("production-link").style.borderBottomColor = "#800020";
-			document.getElementById("post-link").style.backgroundColor = "#F8F8F8";
-			document.getElementById("post-link").style.color = "#333333";
-			document.getElementById("post-link").style.borderBottomColor = "transparent";
 			localStorage.tab = "production";
    		}
 
-   		function openPost() {
+   		function openPostProduction() {
 			document.getElementById("production").style.display = "none";
-			document.getElementById("post").style.display = "block";
-   			document.getElementById("post-link").style.backgroundColor = "#F0F0F0";
-   			document.getElementById("post-link").style.color = "#800020";
-			document.getElementById("post-link").style.borderBottomColor = "#800020";
+			document.getElementById("field-recording").style.display = "none";
+			document.getElementById("post-production").style.display = "block";
 			document.getElementById("production-link").style.backgroundColor = "#F8F8F8";
 			document.getElementById("production-link").style.color = "#333333";
 			document.getElementById("production-link").style.borderBottomColor = "transparent";
-			localStorage.tab = "post"
+			document.getElementById("field-recording-link").style.backgroundColor = "#F8F8F8";
+			document.getElementById("field-recording-link").style.color = "#333333";
+			document.getElementById("field-recording-link").style.borderBottomColor = "transparent";
+   			document.getElementById("post-production-link").style.backgroundColor = "#F0F0F0";
+   			document.getElementById("post-production-link").style.color = "#800020";
+			document.getElementById("post-production-link").style.borderBottomColor = "#800020";
+			localStorage.tab = "postProduction";
+   		}
+
+   		function openFieldRecording() {
+			document.getElementById("production").style.display = "none";
+			document.getElementById("post-production").style.display = "none";
+			document.getElementById("field-recording").style.display = "block";
+			document.getElementById("production-link").style.backgroundColor = "#F8F8F8";
+			document.getElementById("production-link").style.color = "#333333";
+			document.getElementById("production-link").style.borderBottomColor = "transparent";
+			document.getElementById("post-production-link").style.backgroundColor = "#F8F8F8";
+			document.getElementById("post-production-link").style.color = "#333333";
+			document.getElementById("post-production-link").style.borderBottomColor = "transparent";
+   			document.getElementById("field-recording-link").style.backgroundColor = "#F0F0F0";
+   			document.getElementById("field-recording-link").style.color = "#800020";
+			document.getElementById("field-recording-link").style.borderBottomColor = "#800020";
+			localStorage.tab = "fieldRecording";
    		}
 
 		function init() {
-        	if (localStorage.tab === "post") {
-				openPost();
+			if (localStorage.tab === "fieldRecording") {
+				openFieldRecording();
+			} else if (localStorage.tab === "postProduction") {
+				openPostProduction();
         	} else {
 				openProduction();
         	}

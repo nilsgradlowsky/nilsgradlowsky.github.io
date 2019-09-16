@@ -62,7 +62,12 @@ hr {
 	padding-top:20px;
 }
 
-#post {
+#post-production {
+	display: flex;
+	padding-top:20px;
+}
+
+#field-recording {
 	display: flex;
 	padding-top:20px;
 }
