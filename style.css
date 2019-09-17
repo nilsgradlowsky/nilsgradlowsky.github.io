@@ -204,7 +204,7 @@ hr {
 	padding:20px;
 }
 
-#about img {
+#profile {
 	width:250px;
 	height:auto;
 	border-radius: 50%;
@@ -213,10 +213,6 @@ hr {
 
 #bio {
 	text-align: justified;
-}
-
-#credits ul {
-	list-style: none;
 }
 
 footer p {
