@@ -33,8 +33,9 @@ header a:hover {
 }
 
 header h1 {
-	font-size:35px;
+	font-size:40px;
 	display:inline-block;
+	vertical-align: middle;
 	margin:5px;
 }
 
@@ -42,16 +43,18 @@ header h2 {
 	font-size:20px;
 	color:#888888;
 	display:inline-block;
+	vertical-align: middle;
 	margin:5px;
 }
 
 #main-nav {
 	display: inline-flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #main-nav h2 {
-	font-size:25px;
+	font-size:30px;
 	margin:5px;
 }
 
@@ -185,8 +188,16 @@ hr {
 	margin:10px;
 }
 
-#reel div {
+#reel {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	padding-top:10vh;
+}
 
+#iframe-container {
+  	width: 100vmin; 
+  	height: 56.25vmin;
 }
 
 #about {
@@ -197,6 +208,7 @@ hr {
 	width:250px;
 	height:auto;
 	border-radius: 50%;
+	border: 6px solid #800020;
 }
 
 #bio {
@@ -222,8 +234,8 @@ footer p {
 .footer-link img {
 	flex-grow:1;
 	width:auto;
-	height:15px;
-	margin:15px;
+	height:20px;
+	margin:20px;
 	filter:grayscale(1);
 }
 
