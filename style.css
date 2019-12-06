@@ -127,7 +127,7 @@ hr {
 
 .work-item img {
 	width:225px;
-	height:auto;
+	height: 300px;
 }
 
 .work-item:hover img {
@@ -192,7 +192,12 @@ hr {
 	display:flex;
 	justify-content: center;
 	align-items: center;
-	padding-top:10vh;
+	padding-top:5vh;
+}
+
+#game-audio {
+	background-color: #333333;
+	color: #F8F8F8;
 }
 
 #secret span:nth-child(2) {
@@ -209,7 +214,7 @@ hr {
 
 #iframe-container {
   	width: 100vmin;
-  	height: 62vmin;
+  	height: 65vmin;
 }
 
 #video-description {
@@ -231,7 +236,6 @@ width:5mm;
 margin-right:2mm;
 display:inline-block;
 vertical-align:middle;
-filter: invert(1);
 }
 
 #download p {
