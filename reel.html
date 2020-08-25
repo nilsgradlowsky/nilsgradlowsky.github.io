@@ -13,7 +13,7 @@
 	<div id="navigation-bar">
 		<header>
 			<a href="index.html"><h1>Nils Gradlowsky</h1></a>
-			<h2>sound for <a id="secret" href="game-audio.html"><span>film</span><span> games</span></a></h2>
+			<h2>sound for film</h2>
 		</header>
 		<nav id="main-nav">
 			<h2><a href="index.html">about</a></h2>
@@ -21,9 +21,16 @@
 			<h2><a href="work.html">work</a></h2>
 		</nav>
 	</div>
+	<nav class="tabs">
+		<button id="live-action-link" class="tab" onclick="openLiveAction()"><h2>live action</h2></button>
+		<button id="animation-link" class="tab" onclick="openAnimation()"><h2>animation</h2></button>
+	</nav>
 	<section id="reel">
-		<div id="iframe-container">
-			<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/360157150?autoplay=1&loop=1&color=800020&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+		<div id="live-action" class="iframe-container">
+			<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/360157150?color=800020&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+		</div>
+		<div id="animation" class="iframe-container">
+			<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/378830282?color=800020&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 		</div>
 	</section>
 	<footer>
@@ -37,13 +44,32 @@
 	</footer>
 
 	<script type="text/javascript">
-   		function openCinemaMode() {
-   			document.body.style.transition = "background-color 1s linear, color 1s linear";
-   			document.body.style.backgroundColor = "#333333";
-   			document.body.style.color = "#F8F8F8";
+		function openLiveAction() {
+			document.getElementById("animation").style.display = "none";
+			document.getElementById("live-action").style.display = "block";
+			document.getElementsByClassName("tab-active")[0].classList.remove("tab-active");
+			document.getElementById("live-action-link").classList.add("tab-active");
+			localStorage.reelTab = "liveAction";
+   		}
+		   
+   		function openAnimation() {
+			document.getElementById("live-action").style.display = "none";
+			document.getElementById("animation").style.display = "block";
+			document.getElementsByClassName("tab-active")[0].classList.remove("tab-active");
+			document.getElementById("animation-link").classList.add("tab-active");
+			localStorage.reelTab = "animation";
    		}
 
-   		window.onload = openCinemaMode;
+		function init() {
+			if (localStorage.reelTab === "animation") {
+				document.getElementById("animation-link").classList.add("tab-active");
+				document.getElementById("animation").style.display = "block";
+			} else {
+				document.getElementById("live-action-link").classList.add("tab-active");
+				document.getElementById("live-action").style.display = "block";
+        	}
+    	}
+   		window.onload = init;
 	</script>
 
 </body>

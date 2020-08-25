@@ -55,7 +55,7 @@ header h2 {
 
 #main-nav h2 {
 	font-size:30px;
-	margin:5px;
+	margin:5px 10px;
 }
 
 #main-nav a {
@@ -70,20 +70,27 @@ hr {
     display:block;
 }
 
-#work-nav {
+.tabs {
 	display:flex;
 	margin:auto;
 	justify-content: center;
 }
 
-#work-nav a {
+.tab {
+	display:block;
+	background-color: #F8F8F8;
+	cursor:pointer;
 	flex-basis:50%;
 	flex-grow:1;
+	border: none;
+	outline: none;
 	border-bottom:3px solid transparent;
 }
 
-#work-nav h2 {
-	margin:10px;
+.tab-active {
+	background-color: #F0F0F0;
+	color: #800020;
+	border-bottom-color: #800020;
 }
 
 #production {
@@ -101,6 +108,16 @@ hr {
 }
 
 #field-recording {
+	display:none;
+	padding-top:20px;
+}
+
+#live-action {
+	display:none;
+	padding-top:20px;
+}
+
+#animation {
 	display:none;
 	padding-top:20px;
 }
@@ -195,24 +212,7 @@ hr {
 	padding-top:5vh;
 }
 
-#game-audio {
-	background-color: #333333;
-	color: #F8F8F8;
-}
-
-#secret span:nth-child(2) {
-	display:none;
-}
-
-#secret:hover span:first-child {
-	text-decoration: line-through;
-}
-
-#secret:hover span:nth-child(2) {
-	display: inline;
-}
-
-#iframe-container {
+.iframe-container {
   	width: 100vmin;
   	height: 65vmin;
 }

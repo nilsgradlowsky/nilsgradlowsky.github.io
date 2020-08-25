@@ -21,12 +21,36 @@
 			<h2><a href="work.html">work</a></h2>
 		</nav>
 	</div>
-	<nav id="work-nav">
-		<a id="production-link" href="" onclick="openProduction()"><h2>production</h2></a>
-		<a id="post-production-link" href="" onclick="openPostProduction()"><h2>post-production</h2></a>
-		<a id="field-recording-link" href="" onclick="openFieldRecording()"><h2>field recording</h2></a>
+	<nav class="tabs">
+		<button id="post-production-link" class="tab" onclick="openPostProduction()"><h2>post-production</h2></button>
+		<button id="production-link" class="tab" onclick="openProduction()"><h2>production</h2></button>
+		<button id="field-recording-link" class="tab" onclick="openFieldRecording()"><h2>field recording</h2></button>
 	</nav>
 	<section id="production">
+		<a class="work-item" href="production/charlotte-link.html">
+			<img src="production/charlotte-link.jpg"/>
+			<div class="caption">
+				<h3>Charlotte Link (2020)</h3>
+				<h3>TV Film</h3>
+				<h3>Boom Operator</h3>
+			</div>
+		</a>
+		<a class="work-item" href="production/lotta.html">
+			<img src="production/lotta.jpg"/>
+			<div class="caption">
+				<h3>Lotta (2019)</h3>
+				<h3>TV Series</h3>
+				<h3>Add. Production Sound Mixer</h3>
+			</div>
+		</a>
+		<a class="work-item" href="production/herr-und-frau-bulle.html">
+			<img src="production/herr-und-frau-bulle.jpg"/>
+			<div class="caption">
+				<h3>Herr und Frau Bulle - Totentanz (2019)</h3>
+				<h3>TV Film</h3>
+				<h3>Boom Operator</h3>
+			</div>
+		</a>
 		<a class="work-item" href="production/die-einzelteile-der-liebe.html">
 			<img src="production/die-einzelteile-der-liebe.jpg"/>
 			<div class="caption">
@@ -41,6 +65,14 @@
 				<h3>Weitermachen Sanssouci (2019)</h3>
 				<h3>Feature Film</h3>
 				<h3>2nd Boom Operator</h3>
+			</div>
+		</a>
+		<a class="work-item" href="production/asphaltgorillas.html">
+			<img src="production/asphaltgorillas.jpg"/>
+			<div class="caption">
+				<h3>Asphaltgorillas (2018)</h3>
+				<h3>Feature Film</h3>
+				<h3>Add. Boom Operator</h3>
 			</div>
 		</a>
 		<a class="work-item" href="production/fünf-dinge-die-ich-nicht-verstehe.html">
@@ -149,27 +181,41 @@
 		</a>
 	</section>
 	<section id="post-production">
-		<a class="work-item in-production" href="post/in-production.html">
-			<img/>
-			<h3 class="in-production-text">IN PRODUCTION</h3>
+		<a class="work-item" href="post/green-sea.html">
+			<img src="post/green-sea.jpg"/>
 			<div class="caption">
-				<h3>IN PRODUCTION</h3>
+				<h3>Green Sea (2020)</h3>
+				<h3>Feature Film</h3>
 				<h3>Sound Designer</h3>
+			</div>
+		</a>
+		<a class="work-item" href="post/das-feuer-in-dir.html">
+			<img src="post/das-feuer-in-dir.png"/>
+			<div class="caption">
+				<h3>Das Feuer in Dir (2020)</h3>
+				<h3>Short Film</h3>
+				<h3>Sound Designer, Dialogue Editor, & Re-Recording Mixer</h3>
+			</div>
+		</a>
+		<a class="work-item" href="post/nach-mir-die-sintflut.html">
+			<img src="post/nach-mir-die-sintflut.jpg"/>
+			<div class="caption">
+				<h3>Nach mir die Sintflut (2020)</h3>
+				<h3>Short Film</h3>
+				<h3>Sound Designer, Dialogue Editor, & Re-Recording Mixer</h3>
 			</div>
 		</a>
 		<a class="work-item" href="post/miliz.html">
 			<img src="post/miliz.jpg"/>
 			<div class="caption">
-				<h3>IN PRODUCTION</h3>
-				<h3>Miliz</h3>
+				<h3>Miliz (2020)</h3>
 				<h3>Mini Series</h3>
 				<h3>Sound Designer & Dialogue Editor</h3>
 			</div>
 		</a>
 		<a class="work-item" href="post/deine-schöne-gestalt.html">
-			<img src="post/deine-schöne-gestalt.png"/>
+			<img src="post/deine-schöne-gestalt.jpg"/>
 			<div class="caption">
-				<h3>IN PRODUCTION</h3>
 				<h3>Deine Schöne Gestalt</h3>
 				<h3>Short Film</h3>
 				<h3>Additional Sound Designer</h3>
@@ -230,61 +276,43 @@
 	</footer>
 
 	<script type="text/javascript">
-   		function openProduction() {
-   			document.getElementById("post-production").style.display = "none";
-   			document.getElementById("field-recording").style.display = "none";
-			document.getElementById("production").style.display = "flex";
-			document.getElementById("post-production-link").style.backgroundColor = "#F8F8F8";
-			document.getElementById("post-production-link").style.color = "#333333";
-			document.getElementById("post-production-link").style.borderBottomColor = "transparent";
-			document.getElementById("field-recording-link").style.backgroundColor = "#F8F8F8";
-			document.getElementById("field-recording-link").style.color = "#333333";
-			document.getElementById("field-recording-link").style.borderBottomColor = "transparent";
-   			document.getElementById("production-link").style.backgroundColor = "#F0F0F0";
-   			document.getElementById("production-link").style.color = "#800020";
-			document.getElementById("production-link").style.borderBottomColor = "#800020";
-			localStorage.tab = "production";
-   		}
-
-   		function openPostProduction() {
+		function openPostProduction() {
 			document.getElementById("production").style.display = "none";
 			document.getElementById("field-recording").style.display = "none";
 			document.getElementById("post-production").style.display = "flex";
-			document.getElementById("production-link").style.backgroundColor = "#F8F8F8";
-			document.getElementById("production-link").style.color = "#333333";
-			document.getElementById("production-link").style.borderBottomColor = "transparent";
-			document.getElementById("field-recording-link").style.backgroundColor = "#F8F8F8";
-			document.getElementById("field-recording-link").style.color = "#333333";
-			document.getElementById("field-recording-link").style.borderBottomColor = "transparent";
-   			document.getElementById("post-production-link").style.backgroundColor = "#F0F0F0";
-   			document.getElementById("post-production-link").style.color = "#800020";
-			document.getElementById("post-production-link").style.borderBottomColor = "#800020";
-			localStorage.tab = "postProduction";
+			document.getElementsByClassName("tab-active")[0].classList.remove("tab-active");
+			document.getElementById("post-production-link").classList.add("tab-active");
+			localStorage.workTab = "postProduction";
+   		}
+		   
+   		function openProduction() {
+			document.getElementById("field-recording").style.display = "none";
+			document.getElementById("post-production").style.display = "none";
+			document.getElementById("production").style.display = "flex";
+			document.getElementsByClassName("tab-active")[0].classList.remove("tab-active");
+			document.getElementById("production-link").classList.add("tab-active");
+			localStorage.workTab = "production";
    		}
 
    		function openFieldRecording() {
 			document.getElementById("production").style.display = "none";
 			document.getElementById("post-production").style.display = "none";
-			document.getElementById("field-recording").style.display = "block";
-			document.getElementById("production-link").style.backgroundColor = "#F8F8F8";
-			document.getElementById("production-link").style.color = "#333333";
-			document.getElementById("production-link").style.borderBottomColor = "transparent";
-			document.getElementById("post-production-link").style.backgroundColor = "#F8F8F8";
-			document.getElementById("post-production-link").style.color = "#333333";
-			document.getElementById("post-production-link").style.borderBottomColor = "transparent";
-   			document.getElementById("field-recording-link").style.backgroundColor = "#F0F0F0";
-   			document.getElementById("field-recording-link").style.color = "#800020";
-			document.getElementById("field-recording-link").style.borderBottomColor = "#800020";
-			localStorage.tab = "fieldRecording";
+			document.getElementById("field-recording").style.display = "flex";
+			document.getElementsByClassName("tab-active")[0].classList.remove("tab-active");
+			document.getElementById("field-recording-link").classList.add("tab-active");
+			localStorage.workTab = "fieldRecording";
    		}
 
 		function init() {
-			if (localStorage.tab === "fieldRecording") {
-				openFieldRecording();
-			} else if (localStorage.tab === "postProduction") {
-				openPostProduction();
+			if (localStorage.workTab === "fieldRecording") {
+				document.getElementById("field-recording-link").classList.add("tab-active");
+				document.getElementById("field-recording").style.display = "flex";
+			} else if (localStorage.workTab === "production") {
+				document.getElementById("production-link").classList.add("tab-active");
+				document.getElementById("production").style.display = "flex";
         	} else {
-				openProduction();
+				document.getElementById("post-production-link").classList.add("tab-active");
+				document.getElementById("post-production").style.display = "flex";
         	}
     	}
    		window.onload = init;
